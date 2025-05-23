@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: demoproject
+
+  data:
+    mongodb:
+      uri: mongodb://root:example@localhost:27018/gamecontentservicedb?authSource=admin

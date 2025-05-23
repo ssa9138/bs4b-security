@@ -1,0 +1,22 @@
+package at.fhv.epa.gameservice.domain.valueobject;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+import java.util.UUID;
+
+@AllArgsConstructor
+@Getter
+public class GameId {
+    private UUID value;
+
+    public static GameId fromString(String idStr) {
+        try {
+            UUID uuid = UUID.fromString(idStr);
+            return new GameId(uuid);
+        } catch (IllegalArgumentException e) {
+            throw new RuntimeException("Invalid GameId: " + idStr, e);
+        }
+    }
+
+}

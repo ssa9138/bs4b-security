@@ -1,0 +1,2 @@
+package at.fhv.epa.gameservice.domain.exception;public class BrawlerDomainException {
+}
