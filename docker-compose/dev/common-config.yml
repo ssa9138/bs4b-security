@@ -1,0 +1,22 @@
+services:
+
+  network-deploy-service:
+    networks:
+      - bs4b-network
+
+  microservices-db-config:
+    extends:
+      service: network-deploy-service
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  microservices-mongodb-config:
+    extends:
+      service: network-deploy-service
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+

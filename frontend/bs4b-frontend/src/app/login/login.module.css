@@ -1,0 +1,83 @@
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+}
+
+.container {
+  background-image: url('/Login_UI.png');
+  background-size: contain; /* wichtig: vollständiges Bild anzeigen */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000; /* füllt eventuelle Ränder */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+
+  /* Verhindert Scrollen auf kleineren Bildschirmen */
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: none; /* Kein Schatten */
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
+
+.input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-shadow: 0 0 0 1px #ccc;
+  background-color: rgba(255, 255, 255, 0.9); /* leicht transparent */
+  color: black;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+.button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #016917;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.button:hover {
+  background-color: #ffcc00;
+  transform: translateY(-2px);
+}

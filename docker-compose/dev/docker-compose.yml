@@ -1,0 +1,24 @@
+services:
+  playerservicedb:
+    container_name: playerservicedb
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: playerservicedb
+    extends:
+      file: common-config.yml
+      service: microservices-db-config
+
+  gamecontentservicedb:
+    container_name: gamecontentservicedb
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_DATABASE: gamecontentservicedb
+    extends:
+      file: common-config.yml
+      service: microservices-mongodb-config
+
+networks:
+  bs4b-network:
+    driver: bridge
